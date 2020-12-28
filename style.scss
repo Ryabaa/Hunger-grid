@@ -1,0 +1,258 @@
+$color-1: #fff;
+$color-2: #000;
+$color-3: #ffffffe6;
+$color-4: #333333;
+$color-5: #ffffff33;
+$color-6: #e8c300;
+$color-7: #33333380;
+$bg-1: #fff;
+$bg-2: #000000e6;
+$bg-input: #e5e5e5;
+
+//--------------------------------------------------------//
+
+* {
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+html {
+    font-size: 12px;
+    font-family: "Open Sans";
+}
+
+@font-face {
+    font-family: banny;
+    font-style: normal;
+    font-weight: normal;
+    src: local("Banny Round"),
+        url("/Hunger/images/Banny-Round.woff") format("woff");
+}
+
+@mixin items($jitems, $aitems) {
+    justify-items: $jitems;
+    align-items: $aitems;
+}
+
+@mixin title {
+    font-family: banny;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+@mixin subtitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+@mixin transist {
+    transition: all 0.6s ease;
+}
+
+.title-1 {
+    @include title;
+    color: $color-1;
+}
+
+.title-2 {
+    @include title;
+    color: $color-2;
+}
+
+.subtitle-1 {
+    @include subtitle;
+    color: $color-1;
+}
+
+.subtitle-2 {
+    @include subtitle;
+    color: $color-2;
+}
+
+@mixin text-bold {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.text-bold-1 {
+    @include text-bold();
+    color: $color-1;
+}
+
+.text-bold-2 {
+    @include text-bold();
+    color: $color-2;
+}
+
+.section-name {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: $color-1;
+}
+
+.link-button {
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    background: $color-6;
+    cursor: pointer;
+    color: $color-1;
+    display: grid;
+    @include transist();
+    @include items(center, center);
+
+    &:hover {
+        background: none;
+        border: 1px solid $color-5;
+    }
+}
+
+.yellow-line {
+    background: $color-6;
+    width: 60px;
+    height: 5px;
+    border-radius: 50px;
+}
+
+.wheel-image {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.vertical-line {
+    height: 100%;
+    width: 1px;
+    background: $color-5;
+    position: absolute;
+    left: 50%;
+}
+
+.header-hero {
+    background: url(./img/header-bg.png);
+    background-size: cover;
+    height: 800px;
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include items(center, center);
+    column-gap: 150px;
+
+    &-nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        @include items(center, center);
+        border-bottom: solid 1px $color-5;
+
+        &__link {
+            height: 100px;
+            width: 133px;
+            display: grid;
+            @include items(center, center);
+            @include transist();
+
+            &:hover {
+                text-shadow: -3px -3px 4px;
+                border-radius: 20px;
+                background: $color-6;
+            }
+        }
+    }
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    @include items(center, center);
+
+    &-time {
+        transform: rotate(-90deg);
+        text-align: center;
+    }
+
+    &-container-center {
+        padding: 230px 0;
+        border-left: 1px solid $color-5;
+        border-right: 1px solid $color-5;
+        display: grid;
+        grid-template-rows: repeat(10, auto);
+        @include items(center, center);
+
+        &__subtitle {
+            grid-row: 4 / 5;
+        }
+
+        &__title {
+            font-size: 8rem;
+            grid-row: 5 / 6;
+        }
+
+        &__yellow-line {
+            grid-row: 6 / 7;
+        }
+
+        &__links {
+            margin-top: 30px;
+            height: 65px;
+            grid-row: 7 / 8;
+            display: grid;
+            grid-template-columns: 202px 40px 202px;
+
+            &-transparent {
+                background: none;
+                border: 1px solid $color-5;
+                justify-self: end;
+                grid-column: 3 / 4;
+
+                &:hover {
+                    background: $color-6;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    &-container-right {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 20px;
+
+        &__link {
+            @include transist();
+            &:hover {
+                background: $color-6;
+                border-radius: 31px;
+                box-shadow: $color-6 -2px -2px 7px;
+            }
+        }
+    }
+
+    &-vertical-line {
+        height: 700px;
+    }
+
+    &-link {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 650px;
+        @include transist();
+
+        &:hover {
+            background: $color-6;
+            border-radius: 30px;
+            box-shadow: $color-6 -2px -2px 7px;
+        }
+    }
+}
