@@ -61,6 +61,16 @@ html {
   color: #000;
 }
 
+.text-1 {
+  font-size: 1.17rem;
+  color: #fff;
+}
+
+.text-2 {
+  font-size: 1.17rem;
+  color: #000;
+}
+
 .section-name {
   font-weight: bold;
   text-transform: uppercase;
@@ -95,6 +105,17 @@ html {
   width: 60px;
   height: 5px;
   border-radius: 50px;
+}
+
+.yellow-sqare {
+  width: 200px;
+  height: 200px;
+  border: 20px solid #e8c300;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
+  border-radius: 5px;
 }
 
 .wheel-image {
@@ -283,4 +304,50 @@ html {
   border-radius: 30px;
   -webkit-box-shadow: #e8c300 -2px -2px 7px;
           box-shadow: #e8c300 -2px -2px 7px;
+}
+
+.section-1 {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  padding: 100px 50px;
+  justify-items: unset;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+}
+
+.section-1 .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[3];
+      grid-template-rows: repeat(3, auto);
+  text-align: center;
+  max-width: 566px;
+  grid-column: 0.66667;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  row-gap: 10px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section-1 .image {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-left: 0;
+  margin-right: 60px;
+  grid-column: 0.5;
+  width: 475px;
+}
+
+.section-1 .yellow-sqare {
+  position: absolute;
+  right: 50px;
+  left: unset;
 }

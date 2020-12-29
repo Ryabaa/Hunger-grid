@@ -89,6 +89,16 @@ html {
     color: $color-2;
 }
 
+.text-1 {
+    font-size: 1.17rem;
+    color: $color-1;
+}
+
+.text-2 {
+    font-size: 1.17rem;
+    color: $color-2;
+}
+
 .section-name {
     font-weight: bold;
     text-transform: uppercase;
@@ -118,6 +128,15 @@ html {
     width: 60px;
     height: 5px;
     border-radius: 50px;
+}
+
+.yellow-sqare {
+    width: 200px;
+    height: 200px;
+    border: 20px solid #e8c300;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5));
+    border-radius: 5px;
 }
 
 .wheel-image {
@@ -255,4 +274,51 @@ html {
             box-shadow: $color-6 -2px -2px 7px;
         }
     }
+}
+
+@mixin section(
+    $first,
+    $second,
+    $jself-1,
+    $jself-2,
+    $sqare-1,
+    $sqare-2,
+    $image-1,
+    $image-2
+) {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 100px 50px;
+    @include items(unset, center);
+
+    .container {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        text-align: center;
+        max-width: 566px;
+        grid-column: $first;
+        justify-self: $jself-1;
+        row-gap: 10px;
+        @include items(center, center);
+    }
+
+    .image {
+        justify-self: $jself-2;
+        margin-left: $image-1;
+        margin-right: $image-2;
+        grid-column: $second;
+        width: 475px;
+    }
+
+    .yellow-sqare {
+        position: absolute;
+        right: $sqare-1;
+        left: $sqare-2;
+    }
+}
+
+.section-1 {
+    @include section(2 / 3, 1 / 2, start, end, 50px, unset, 0, 60px);
+    background: $bg-1;
 }
