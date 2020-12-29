@@ -440,3 +440,16 @@ html {
         }
     }
 }
+
+.specialties {
+    &-ellipsese-container{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 15px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 50px;
+        z-index: 2;
+    }
+}
