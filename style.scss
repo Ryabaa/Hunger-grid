@@ -442,9 +442,9 @@ html {
 }
 
 .specialties {
-    background: url(./img/events-bg.png)
+    background: url(./img/events-bg.png);
 
-    &-ellipsese-container{
+    &-ellipses-container{
         display: grid;
         grid-template-columns: repeat(3, auto);
         column-gap: 15px;
