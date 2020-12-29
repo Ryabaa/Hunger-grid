@@ -442,6 +442,8 @@ html {
 }
 
 .specialties {
+    background: url(./img/events-bg.png)
+
     &-ellipsese-container{
         display: grid;
         grid-template-columns: repeat(3, auto);
