@@ -312,8 +312,8 @@ html {
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 100px 50px;
-    z-index: -1;
+    padding: 100px 80px;
+    z-index: 0;
     @include items(unset, center);
 
     .container {
@@ -343,15 +343,100 @@ html {
 }
 
 .section-1 {
-    @include section(2 / 3, 1 / 2, start, end, 50px, unset, 0, 60px);
+    @include section(2 / 3, 1 / 2, start, end, 50px, unset, 0, 26px);
     background: $bg-1;
 }
 
 .section-2 {
-    @include section(1 / 2, 2 / 3, end, start, unset, 50px, 60px, 0);
+    @include section(1 / 2, 2 / 3, end, start, unset, 50px, 26px, 0);
     background-size: cover;
 }
 
 .team {
     background: url(./img/team-bg.png);
+}
+
+.section-info {
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    top: unset;
+    color: $color-7;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    &__span {
+        white-space: pre-wrap;
+        color: $color-4;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}
+
+.input {
+    background: $bg-input;
+    line-height: 19px;
+    text-indent: 20px;
+    border-radius: 5px;
+    border: 0;
+    height: 60px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.booking {
+    &-container {
+        width: 100%;
+    }
+
+    &-form {
+        margin-top: 10px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    &-input {
+        width: 100%;
+    }
+
+    .button-card {
+        width: 100%;
+        height: 60px;
+        background: $color-1;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        @include items(center, center);
+        @include transist;
+
+        &:hover {
+            border-radius: 50px;
+            background: $color-6;
+        }
+    }
+
+    &-button {
+        font-weight: 800;
+        width: 100%;
+        cursor: pointer;
+        border: 0;
+        @include transist;
+
+        &:hover {
+            border-radius: 50px;
+            width: 70%;
+            background: $color-1;
+            color: $color-4;
+            border: 1px solid $color-6;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
 }
