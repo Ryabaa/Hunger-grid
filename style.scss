@@ -104,6 +104,10 @@ html {
     text-transform: uppercase;
     letter-spacing: 0.5em;
     color: $color-1;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 50px;
 }
 
 .link-button {
@@ -146,12 +150,27 @@ html {
     transform: translate(-50%, 0);
 }
 
-.vertical-line {
+@mixin vertical-line {
     height: 100%;
     width: 1px;
     background: $color-5;
     position: absolute;
+    z-index: -2;
+}
+
+.vertical-line__left {
+    @include vertical-line;
+    left: 20%;
+}
+
+.vertical-line__center {
+    @include vertical-line;
     left: 50%;
+}
+
+.vertical-line__right {
+    @include vertical-line;
+    right: 20%;
 }
 
 .header-hero {
@@ -193,6 +212,7 @@ html {
 .hero {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
+    z-index: 0;
     @include items(center, center);
 
     &-time {
@@ -210,6 +230,9 @@ html {
 
         &__subtitle {
             grid-row: 4 / 5;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            font-size: 1rem;
         }
 
         &__title {
@@ -290,6 +313,7 @@ html {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 100px 50px;
+    z-index: -1;
     @include items(unset, center);
 
     .container {
@@ -321,4 +345,13 @@ html {
 .section-1 {
     @include section(2 / 3, 1 / 2, start, end, 50px, unset, 0, 60px);
     background: $bg-1;
+}
+
+.section-2 {
+    @include section(1 / 2, 2 / 3, end, start, unset, 50px, 60px, 0);
+    background-size: cover;
+}
+
+.team {
+    background: url(./img/team-bg.png);
 }
