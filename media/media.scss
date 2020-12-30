@@ -1,1 +1,58 @@
+@media (max-width: 1200px) {
+    .header-hero {
+        height: 908px;
+    }
 
+    .header {
+        &-nav {
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 1fr);
+
+            &__link-2 {
+                grid-row: 1 / 2;
+            }
+        }
+    }
+
+    .hero {
+        &-container-center {
+            height: 247px;
+            &__title {
+                font-size: 5rem;
+            }
+        }
+
+        &-link {
+            top: 750px;
+        }
+    }
+
+    .events {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        row-gap: 70px;
+
+        &-image-1 {
+        }
+
+        &-image-2 {
+            grid-row: 2 / 3;
+        }
+
+        &-card-1 {
+            grid-row: 1 / 2;
+        }
+
+        &-card-2 {
+            grid-row: 2 / 3;
+        }
+
+        &-yellow-sqare-1 {
+            grid-row: 1 / 2;
+        }
+
+        &-yellow-sqare-2 {
+            grid-row: 2 / 3;
+        }
+    }
+}

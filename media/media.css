@@ -1,1 +1,58 @@
-/* No CSS *//*# sourceMappingURL=media.css.map */
+@media (max-width: 1200px) {
+  .header-hero {
+    height: 908px;
+  }
+  .header-nav {
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .header-nav__link-2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .hero-container-center {
+    height: 247px;
+  }
+  .hero-container-center__title {
+    font-size: 5rem;
+  }
+  .hero-link {
+    top: 750px;
+  }
+  .events {
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 70px;
+  }
+  .events-image-2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .events-card-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .events-card-2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .events-yellow-sqare-1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .events-yellow-sqare-2 {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+}
+/*# sourceMappingURL=media.css.map */

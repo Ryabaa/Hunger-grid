@@ -568,7 +568,7 @@ html {
 }
 
 .menu {
-  padding: 100px 0;
+  padding: 100px 20px;
   display: -ms-grid;
   display: grid;
   row-gap: 15px;
@@ -672,7 +672,7 @@ html {
 }
 
 .events-image {
-  width: 425px;
+  width: 400px;
   z-index: 1;
 }
 
@@ -690,7 +690,7 @@ html {
 
 .events-card {
   background: #000;
-  width: 427px;
+  width: 402px;
   height: 70px;
   position: absolute;
   z-index: 3;
@@ -707,13 +707,13 @@ html {
 .events-card-1 {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  left: 390px;
+  left: 375px;
 }
 
 .events-card-2 {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
-  right: 390px;
+  right: 375px;
 }
 
 .events-card-title {
