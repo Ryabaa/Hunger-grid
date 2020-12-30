@@ -386,6 +386,38 @@ html {
     outline: none;
 }
 
+.button-card {
+    background: $color-1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @include items(center, center);
+    @include transist();
+
+    &:hover {
+        border-radius: 50px;
+        background: $color-6;
+    }
+}
+
+.button {
+    cursor: pointer;
+    border: 0;
+    @include transist();
+
+    &:hover {
+        border-radius: 50px;
+        background: $color-1;
+        color: $color-4;
+        border: 1px solid $color-6;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
 .booking {
     &-container {
         width: 100%;
@@ -405,38 +437,100 @@ html {
     }
 
     .button-card {
-        width: 100%;
         height: 60px;
-        background: $color-1;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
         @include items(center, center);
         @include transist;
-
-        &:hover {
-            border-radius: 50px;
-            background: $color-6;
-        }
     }
 
     &-button {
-        font-weight: 800;
         width: 100%;
-        cursor: pointer;
-        border: 0;
-        @include transist;
 
         &:hover {
-            border-radius: 50px;
             width: 70%;
-            background: $color-1;
-            color: $color-4;
-            border: 1px solid $color-6;
         }
+    }
+}
 
-        &:focus {
-            outline: none;
+.specialties {
+    background: url(./img/events-bg.png);
+
+    &-ellipses-container {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 15px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        bottom: 50px;
+        z-index: 2;
+    }
+}
+
+.menu {
+    padding: 100px 0;
+    display: grid;
+    row-gap: 15px;
+    grid-template-rows: repeat(5, auto);
+    @include items(center, center);
+
+    &-subtitle {
+        max-width: 560px;
+        text-align: center;
+    }
+
+    &-container-1 {
+        margin-top: 35px;
+        height: 50px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        @include items(center, center);
+
+        &__card {
+            width: 120px;
+            height: 100%;
+            border-radius: 0;
+            justify-content: end;
+
+            &-button {
+                width: 100%;
+                height: 100%;
+                color: $color-4;
+                background: none;
+
+                &:hover {
+                    width: 80%;
+                }
+            }
+
+            &:not(:first-child) {
+                border-left: 1px solid $color-7;
+            }
+
+            &:hover {
+                border: none;
+            }
+        }
+    }
+
+    &-container-2 {
+        margin-top: 35px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+        row-gap: 30px;
+
+        &__card {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            @include items(start, start);
+
+            &-title {
+                font-size: 1.5rem;
+            }
+
+            &-text {
+                color: $color-7;
+            }
         }
     }
 }
