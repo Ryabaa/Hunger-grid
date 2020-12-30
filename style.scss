@@ -5,7 +5,9 @@ $color-4: #333333;
 $color-5: #ffffff33;
 $color-6: #e8c300;
 $color-7: #33333380;
-$bg-1: #fff;
+$color-8: #33333333;
+$color-9: #ffffff80;
+$bg-1: #ffffff;
 $bg-2: #000000e6;
 $bg-input: #e5e5e5;
 
@@ -135,6 +137,7 @@ html {
 }
 
 .yellow-sqare {
+    position: absolute;
     width: 200px;
     height: 200px;
     border: 20px solid #e8c300;
@@ -503,7 +506,7 @@ html {
             }
 
             &:not(:first-child) {
-                border-left: 1px solid $color-7;
+                border-left: 1px solid $color-8;
             }
 
             &:hover {
@@ -531,6 +534,75 @@ html {
             &-text {
                 color: $color-7;
             }
+        }
+    }
+}
+
+.events {
+    background: url(./img/events-bg.png);
+    background-size: cover;
+    padding: 100px 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    z-index: 0;
+    @include items(center, center);
+
+    &-image {
+        width: 425px;
+        z-index: 1;
+
+        &-1 {
+            margin-left: 100px;
+            justify-self: start;
+        }
+
+        &-2 {
+            margin-right: 100px;
+            justify-self: end;
+        }
+    }
+
+    &-card {
+        background: $color-2;
+        width: 427px;
+        height: 70px;
+        position: absolute;
+        z-index: 3;
+        display: flex;
+        text-indent: 20px;
+        @include items(start, center);
+
+        &-1 {
+            transform: rotate(90deg);
+            left: 390px;
+        }
+
+        &-2 {
+            transform: rotate(-90deg);
+            right: 390px;
+        }
+
+        &-title {
+            font-size: 2rem;
+        }
+    }
+
+    &-yellow-sqare-1 {
+        left: 50px;
+        z-index: 3;
+    }
+
+    &-yellow-sqare-2 {
+        right: 50px;
+        z-index: 3;
+    }
+
+    &-info {
+        color: $color-9;
+
+        &__span {
+            font-weight: 600;
         }
     }
 }
