@@ -533,12 +533,16 @@ html {
 }
 
 .specialties-ellipses-container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  column-gap: 15px;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   bottom: 50px;
   z-index: 2;
 }
