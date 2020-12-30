@@ -857,4 +857,29 @@ html {
 .contacts-button:hover {
   width: 75%;
 }
+
+.map {
+  height: 475px;
+}
+
+.footer {
+  background: url(./img/header-bg.png);
+  height: 200px;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .footer-text {
+  text-transform: none;
+  font-size: 2rem;
+}
+
+.footer .footer-text__span {
+  font-weight: 700;
+  color: #e8c300;
+}
 /*# sourceMappingURL=style.css.map */

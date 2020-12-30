@@ -692,3 +692,24 @@ html {
         }
     }
 }
+
+.map {
+    height: 475px;
+}
+
+.footer {
+    background: url(./img/header-bg.png);
+    height: 200px;
+    display: grid;
+    @include items(center, center);
+
+    .footer-text {
+        text-transform: none;
+        font-size: 2rem;
+
+        &__span {
+            font-weight: 700;
+            color: $color-6;
+        }
+    }
+}
