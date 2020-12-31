@@ -355,11 +355,11 @@ html {
 
 .section-2 {
     @include section(1 / 2, 2 / 3, end, start, unset, 50px, 26px, 0);
-    background-size: cover;
 }
 
 .team {
     background: url(./img/team-bg.png);
+    background-size: cover;
 }
 
 .section-info {
@@ -431,7 +431,7 @@ html {
 
     &-form {
         margin-top: 10px;
-        width: 100%;
+        width: 97%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
@@ -459,6 +459,7 @@ html {
 
 .specialties {
     background: url(./img/events-bg.png);
+    background-size: cover;
 
     &-ellipses-container {
         display: grid;
@@ -632,7 +633,7 @@ html {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 2fr;
         grid-gap: 10px;
-        width: 100%;
+        width: 99%;
         @include items(center, center);
 
         &__input {
@@ -640,7 +641,7 @@ html {
 
             &-big {
                 width: 100%;
-                height: 100%;
+                height: 120px;
                 grid-column: 1 / 4;
             }
         }

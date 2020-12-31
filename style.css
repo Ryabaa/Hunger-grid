@@ -399,7 +399,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-size: cover;
 }
 
 .section-2 .container {
@@ -436,6 +435,7 @@ html {
 
 .team {
   background: url(./img/team-bg.png);
+  background-size: cover;
 }
 
 .section-info {
@@ -516,7 +516,7 @@ html {
 
 .booking-form {
   margin-top: 10px;
-  width: 100%;
+  width: 97%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -550,6 +550,7 @@ html {
 
 .specialties {
   background: url(./img/events-bg.png);
+  background-size: cover;
 }
 
 .specialties-ellipses-container {
@@ -777,7 +778,7 @@ html {
   -ms-grid-rows: 1fr 2fr;
       grid-template-rows: 1fr 2fr;
   grid-gap: 10px;
-  width: 100%;
+  width: 99%;
   justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -790,7 +791,7 @@ html {
 
 .contacts-form__input-big {
   width: 100%;
-  height: 100%;
+  height: 120px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
