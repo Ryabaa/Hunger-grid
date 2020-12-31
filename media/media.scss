@@ -223,12 +223,10 @@ $color-6: #e8c300;
         &-container-1 {
             grid-template-columns: 1fr;
             row-gap: 20px;
-            @include items(center, center);
         }
 
         &-container {
             grid-template-columns: repeat(2, auto);
-            justify-self: center;
 
             &__card {
                 &:last-child {
@@ -236,6 +234,105 @@ $color-6: #e8c300;
                     width: 170px;
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 580px) {
+    .wheel-image {
+        width: 100px;
+    }
+
+    .header {
+        column-gap: 100px;
+        &-nav {
+            &__link {
+                width: min-content;
+            }
+        }
+    }
+
+    .hero {
+        &-container-center {
+            &__title {
+                max-width: 240px;
+            }
+        }
+    }
+
+    .contacts {
+        &-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+
+            &__card {
+                width: max-content;
+                &:last-child {
+                    grid-column: 1 / 2;
+                }
+            }
+        }
+    }
+
+    .section-1,
+    .section-2 {
+        padding: 100px 10px;
+        grid-template-columns: 1fr;
+
+        .yellow-sqare {
+            display: none;
+        }
+
+        .container {
+            justify-self: center;
+        }
+
+        .image {
+            margin: 0;
+            justify-self: center;
+        }
+    }
+
+    .menu {
+        &-container-2 {
+            &__card {
+                max-width: max-content;
+
+                &-title {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .events {
+        row-gap: 30px;
+
+        &-image-1 {
+            margin: 0;
+            width: 220px;
+        }
+        &-image-2 {
+            margin: 0;
+            width: 220px;
+        }
+
+        &-card {
+            width: 223px;
+
+            &-1 {
+                left: 160px;
+            }
+            &-2 {
+                right: 180px;
+            }
+        }
+
+        &-yellow-sqare-1 {
+            display: none;
+        }
+        &-yellow-sqare-2 {
+            display: none;
         }
     }
 }

@@ -113,6 +113,7 @@ html {
     left: 50%;
     transform: translate(-50%, 0);
     top: 50px;
+    text-align: center;
 }
 
 .link-button {
@@ -224,6 +225,7 @@ html {
     &-time {
         transform: rotate(-90deg);
         text-align: center;
+        width: max-content;
     }
 
     &-container-center {

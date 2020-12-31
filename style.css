@@ -86,6 +86,7 @@ html {
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   top: 50px;
+  text-align: center;
 }
 
 .link-button {
@@ -234,6 +235,9 @@ html {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   text-align: center;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .hero-container-center {
