@@ -240,11 +240,11 @@ $color-6: #e8c300;
 
 @media (max-width: 580px) {
     .wheel-image {
-        width: 100px;
+        top: 180px;
     }
 
     .header {
-        column-gap: 100px;
+        column-gap: 0;
         &-nav {
             &__link {
                 width: min-content;
@@ -255,7 +255,8 @@ $color-6: #e8c300;
     .hero {
         &-container-center {
             &__title {
-                max-width: 240px;
+                max-width: 220px;
+                font-size: 4.3rem;
             }
         }
     }
@@ -294,7 +295,17 @@ $color-6: #e8c300;
     }
 
     .menu {
+        padding: 100px 10px;
+
+        &-container-1 {
+            &__card {
+                width: 100px;
+            }
+        }
+
         &-container-2 {
+            justify-self: start;
+
             &__card {
                 max-width: max-content;
 
